@@ -1,0 +1,18 @@
+public class Pessoa{
+    String nome, telefone;
+
+    public void exibeDados(){
+        System.out.println("Dados das pessoas " + nome + " " + telefone);
+    }
+}
+
+
+
+public class TestePessoa {
+    public static void main(String[] args) {
+        Pessoa p1 = new Pessoa();
+        p1.nome = "Matheus";
+        p1.telefone = "42997070";
+        p1.exibeDados();
+    }
+}
