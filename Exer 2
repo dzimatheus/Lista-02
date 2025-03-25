@@ -1,0 +1,48 @@
+public class Universidade {
+    String nome, cidade, estado; 
+
+    public void exibeDados(){
+        System.out.println("Nome da Universidade: " + nome + " " + "Cidade localizada " 
+        + cidade + " " + "Estado localizada " + estado);
+    }
+}
+
+
+
+public class Aluno {
+    String nome, curso;
+
+    public void exibeDados(){
+        System.out.println("Nome do aluno: " + nome + " " 
+        + "Cursando: " + curso);
+    }
+}
+
+
+
+public class TesteClasse {
+    public static void main(String[] args) {
+        Universidade u1 = new Universidade();
+        u1.nome = "Unicentro";
+        u1.cidade = "Guarapuava";
+        u1.estado = "Parana";
+        Universidade u2 = new Universidade();
+        u2.nome = "UTFPR";
+        u2.cidade = u1.cidade;
+        u2.estado = u1.estado;
+        Aluno a1 = new Aluno();
+        a1.nome = "Matheus";
+        a1.curso = "Matematica Aplicada e computacional";
+        Aluno a2 = new Aluno();
+        a2.nome = "Breno";
+        a2.curso = a1.curso;
+        Aluno a3 = new Aluno();
+        a3.nome = "Pamela";
+        a3.curso = "Engenharia mecanica";
+        u1.exibeDados();
+        a1.exibeDados();
+        a2.exibeDados();
+        u2.exibeDados();
+        a3.exibeDados();
+    }
+}
